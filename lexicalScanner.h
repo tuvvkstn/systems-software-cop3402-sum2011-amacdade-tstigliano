@@ -1,15 +1,10 @@
-/*
- *	Authors: Tyler Stigliano, Austin Macdade
- *	Implementation of a Lexical Scanner for the language described in class
- *	Class: COP3402: System Software
- *	Professor: Dr. Euripides Montagne
- */
- 
- // Constants
+// Constants
 #define CMAX 11		// Maximum number of character length
 #define DMAX 5		// Maximum number of digit length
-#define LMAX 100	// Ma
+#define LMAX 100	// Maximum line length
 #define ERRMAX 4	// Maximum error number
+#define TRUE 1
+#define FALSE 0
 
 // Token types
 typedef enum	{nulsym = 1, identsym, numbersym, plussym, minussym, 
@@ -44,4 +39,17 @@ int numTotalSymboles = numSpecials + numKeyWords;				// number of special charac
 
 // Global Variables
 char currChar;			// Current character
+char line[LMAX];		// Current line
+int charCount;			// Character counter
+int lineCount;			// line counter
+int errors[ERRMAX];
+FILE* ifp, *ofp; 
+
+
+// Functions
+void errorFound(int type);		// Mark an error
+void initialize();				// Initialize variables
+void nextCharacter();			// Description in source file. 
+void skip();					// Skips whitespace and comments
+
 
