@@ -25,11 +25,11 @@ typedef void* c_vector;
 #define DEFAULT_C_VECTOR_POINTER_LIST_LENGTH 10
 #define DEFAULT_C_VECTOR_DATA_SIZE (sizeof(char))
 
-//TODO: return errors
+//TODO: define all return errors
 #define C_VECTOR_ERROR_NO_ERROR 0
 #define C_VECTOR_ERROR_ARRAY_INDEX_OUT_OF_BOUNDS 1
-#define C_VECTOR_ERROR_ELEMENT_DOES_NOT_EXIST
-#define C_VECTOR_ERROR_CANNOT_DESTROY_NON_VECTOR
+#define C_VECTOR_ERROR_ELEMENT_DOES_NOT_EXIST 2
+#define C_VECTOR_ERROR_CANNOT_DESTROY_NON_VECTOR 3
 
 //constructors
 c_vector newVector();
