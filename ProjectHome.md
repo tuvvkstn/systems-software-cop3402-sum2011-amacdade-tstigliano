@@ -1,0 +1,1 @@
+This is a project that lasts a semester, where we begin my making a PL/0 virtual stack machine and will eventually make a compiler for it as well.
